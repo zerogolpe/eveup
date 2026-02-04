@@ -1,0 +1,15 @@
+d:\EVEUP\EveUp.Services\bin\Debug\net10.0\EveUp.Services.deps.json
+d:\EVEUP\EveUp.Services\bin\Debug\net10.0\EveUp.Services.dll
+d:\EVEUP\EveUp.Services\bin\Debug\net10.0\EveUp.Services.pdb
+d:\EVEUP\EveUp.Services\bin\Debug\net10.0\EveUp.Core.dll
+d:\EVEUP\EveUp.Services\bin\Debug\net10.0\EveUp.Core.pdb
+d:\EVEUP\EveUp.Services\obj\Debug\net10.0\EveUp.Services.csproj.AssemblyReference.cache
+d:\EVEUP\EveUp.Services\obj\Debug\net10.0\EveUp.Services.GeneratedMSBuildEditorConfig.editorconfig
+d:\EVEUP\EveUp.Services\obj\Debug\net10.0\EveUp.Services.AssemblyInfoInputs.cache
+d:\EVEUP\EveUp.Services\obj\Debug\net10.0\EveUp.Services.AssemblyInfo.cs
+d:\EVEUP\EveUp.Services\obj\Debug\net10.0\EveUp.Services.csproj.CoreCompileInputs.cache
+d:\EVEUP\EveUp.Services\obj\Debug\net10.0\EveUp.Se.3D9BDFC6.Up2Date
+d:\EVEUP\EveUp.Services\obj\Debug\net10.0\EveUp.Services.dll
+d:\EVEUP\EveUp.Services\obj\Debug\net10.0\refint\EveUp.Services.dll
+d:\EVEUP\EveUp.Services\obj\Debug\net10.0\EveUp.Services.pdb
+d:\EVEUP\EveUp.Services\obj\Debug\net10.0\ref\EveUp.Services.dll

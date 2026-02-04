@@ -1,0 +1,17 @@
+d:\EVEUP\EveUp.Infrastructure\bin\Debug\net10.0\EveUp.Infrastructure.deps.json
+d:\EVEUP\EveUp.Infrastructure\bin\Debug\net10.0\EveUp.Infrastructure.runtimeconfig.json
+d:\EVEUP\EveUp.Infrastructure\bin\Debug\net10.0\EveUp.Infrastructure.dll
+d:\EVEUP\EveUp.Infrastructure\bin\Debug\net10.0\EveUp.Infrastructure.pdb
+d:\EVEUP\EveUp.Infrastructure\bin\Debug\net10.0\EveUp.Core.dll
+d:\EVEUP\EveUp.Infrastructure\bin\Debug\net10.0\EveUp.Core.pdb
+d:\EVEUP\EveUp.Infrastructure\obj\Debug\net10.0\EveUp.Infrastructure.csproj.AssemblyReference.cache
+d:\EVEUP\EveUp.Infrastructure\obj\Debug\net10.0\EveUp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+d:\EVEUP\EveUp.Infrastructure\obj\Debug\net10.0\EveUp.Infrastructure.AssemblyInfoInputs.cache
+d:\EVEUP\EveUp.Infrastructure\obj\Debug\net10.0\EveUp.Infrastructure.AssemblyInfo.cs
+d:\EVEUP\EveUp.Infrastructure\obj\Debug\net10.0\EveUp.Infrastructure.csproj.CoreCompileInputs.cache
+d:\EVEUP\EveUp.Infrastructure\obj\Debug\net10.0\EveUp.In.9BF912F7.Up2Date
+d:\EVEUP\EveUp.Infrastructure\obj\Debug\net10.0\EveUp.Infrastructure.dll
+d:\EVEUP\EveUp.Infrastructure\obj\Debug\net10.0\refint\EveUp.Infrastructure.dll
+d:\EVEUP\EveUp.Infrastructure\obj\Debug\net10.0\EveUp.Infrastructure.pdb
+d:\EVEUP\EveUp.Infrastructure\obj\Debug\net10.0\EveUp.Infrastructure.genruntimeconfig.cache
+d:\EVEUP\EveUp.Infrastructure\obj\Debug\net10.0\ref\EveUp.Infrastructure.dll

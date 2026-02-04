@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "p3mlT1OfEmQ=",
+  "success": true,
+  "projectFilePath": "D:\\EVEUP\\EveUp.Core\\EveUp.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AND\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
