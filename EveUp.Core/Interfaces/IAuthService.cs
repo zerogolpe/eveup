@@ -10,4 +10,6 @@ public interface IAuthService
     Task LogoutAsync(string refreshToken, Guid userId, string ipAddress);
     Task LogoutAllAsync(Guid userId, string ipAddress);
     Task SendPasswordResetAsync(string email);
+    Task SendVerificationCodeAsync(string email);
+    Task<bool> VerifyEmailAsync(string email, string code);
 }

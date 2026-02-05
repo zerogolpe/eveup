@@ -55,9 +55,9 @@ builder.Services.AddScoped<IChatMessageRepository, ChatMessageRepository>();
 builder.Services.AddScoped<IDenunciationRepository, DenunciationRepository>();
 builder.Services.AddScoped<IContestationRepository, ContestationRepository>();
 
-// Infrastructure services (mock para MVP)
+// Infrastructure services
 builder.Services.AddScoped<IPspProvider, MockPspProvider>();
-builder.Services.AddScoped<INotificationService, MockNotificationService>();
+builder.Services.AddScoped<INotificationService, SmtpEmailService>();
 
 // File Storage
 builder.Services.AddSingleton<IFileStorage>(sp =>

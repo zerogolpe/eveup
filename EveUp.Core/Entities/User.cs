@@ -54,6 +54,10 @@ public sealed class User
     public bool DocumentVerified { get; private set; }
     public bool SelfieVerified { get; private set; }
 
+    // Email verification
+    public string? EmailVerificationCode { get; private set; }
+    public DateTime? EmailVerificationCodeExpiresAt { get; private set; }
+
     // Concurrency control
     public byte[] RowVersion { get; private set; } = Array.Empty<byte>();
 
@@ -77,9 +81,18 @@ public sealed class User
         };
     }
 
+    public void SetEmailVerificationCode(string code, DateTime expiresAt)
+    {
+        EmailVerificationCode = code;
+        EmailVerificationCodeExpiresAt = expiresAt;
+        UpdatedAt = DateTime.UtcNow;
+    }
+
     public void VerifyEmail()
     {
         EmailVerified = true;
+        EmailVerificationCode = null;
+        EmailVerificationCodeExpiresAt = null;
         UpdatedAt = DateTime.UtcNow;
     }
 

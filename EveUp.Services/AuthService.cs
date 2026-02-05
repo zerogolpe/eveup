@@ -81,6 +81,9 @@ public class AuthService : IAuthService
 
         await _userRepo.AddAsync(user);
 
+        // Gerar e enviar código de verificação de email
+        await GenerateAndSendVerificationCodeAsync(user);
+
         var accessToken = _tokenService.GenerateAccessToken(user);
         var (refreshToken, _) = await _tokenService.GenerateRefreshTokenAsync(user);
 
@@ -163,5 +166,65 @@ public class AuthService : IAuthService
 
         await _audit.LogAsync("Auth", user.Id, null, null, "PASSWORD_RESET_REQUESTED",
             "Password reset email sent", user.Id, null);
+    }
+
+    public async Task SendVerificationCodeAsync(string email)
+    {
+        var user = await _userRepo.GetByEmailAsync(email.ToLowerInvariant());
+        if (user == null)
+            return;
+
+        if (user.EmailVerified)
+            return;
+
+        await GenerateAndSendVerificationCodeAsync(user);
+    }
+
+    public async Task<bool> VerifyEmailAsync(string email, string code)
+    {
+        var user = await _userRepo.GetByEmailAsync(email.ToLowerInvariant());
+        if (user == null)
+            return false;
+
+        if (user.EmailVerified)
+            return true;
+
+        if (user.EmailVerificationCode != code)
+            return false;
+
+        if (user.EmailVerificationCodeExpiresAt == null || user.EmailVerificationCodeExpiresAt < DateTime.UtcNow)
+            return false;
+
+        user.VerifyEmail();
+        await _userRepo.UpdateAsync(user);
+
+        await _audit.LogAsync("User", user.Id, null, null, "EMAIL_VERIFIED",
+            "Email verified successfully", user.Id, null);
+
+        return true;
+    }
+
+    private async Task GenerateAndSendVerificationCodeAsync(User user)
+    {
+        var code = Random.Shared.Next(100000, 999999).ToString();
+        user.SetEmailVerificationCode(code, DateTime.UtcNow.AddMinutes(30));
+        await _userRepo.UpdateAsync(user);
+
+        var htmlBody = $@"
+            <div style='font-family: Arial, sans-serif; max-width: 480px; margin: 0 auto;'>
+                <h2 style='color: #6C63FF;'>EveUp - Verificação de Email</h2>
+                <p>Olá, <strong>{user.Name}</strong>!</p>
+                <p>Seu código de verificação é:</p>
+                <div style='background: #f4f4f4; padding: 20px; text-align: center; border-radius: 8px; margin: 20px 0;'>
+                    <span style='font-size: 32px; font-weight: bold; letter-spacing: 8px; color: #333;'>{code}</span>
+                </div>
+                <p>Este código expira em <strong>30 minutos</strong>.</p>
+                <p style='color: #888; font-size: 12px;'>Se você não criou uma conta no EveUp, ignore este email.</p>
+            </div>";
+
+        await _notification.SendEmailAsync(
+            user.Email,
+            "EveUp - Código de Verificação",
+            htmlBody);
     }
 }

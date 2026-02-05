@@ -141,6 +141,8 @@ public class EveUpDbContext : DbContext
             entity.Property(e => e.BanReason).HasMaxLength(500);
             entity.Property(e => e.PayeeId).HasMaxLength(255);
 
+            entity.Property(e => e.EmailVerificationCode).HasMaxLength(6);
+
             entity.Property(e => e.RowVersion)
                 .IsRowVersion()
                 .HasConversion<byte[]>();

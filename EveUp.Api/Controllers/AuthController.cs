@@ -114,6 +114,32 @@ public class AuthController : ControllerBase
     }
 
     /// <summary>
+    /// Verificar email com código de 6 dígitos
+    /// </summary>
+    [HttpPost("verify-email")]
+    [AllowAnonymous]
+    public async Task<ActionResult> VerifyEmail([FromBody] VerifyEmailRequest request)
+    {
+        var result = await _authService.VerifyEmailAsync(request.Email, request.Code);
+
+        if (!result)
+            return BadRequest(new { message = "Código inválido ou expirado" });
+
+        return Ok(new { message = "Email verificado com sucesso" });
+    }
+
+    /// <summary>
+    /// Reenviar código de verificação
+    /// </summary>
+    [HttpPost("resend-verification")]
+    [AllowAnonymous]
+    public async Task<ActionResult> ResendVerification([FromBody] ResendVerificationRequest request)
+    {
+        await _authService.SendVerificationCodeAsync(request.Email);
+        return Ok(new { message = "Se o email existir, um novo código será enviado" });
+    }
+
+    /// <summary>
     /// Esqueci a senha
     /// </summary>
     [HttpPost("forgot-password")]
