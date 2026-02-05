@@ -6,8 +6,6 @@ using EveUp.Infrastructure.Jobs;
 using EveUp.Infrastructure.Repositories;
 using EveUp.Infrastructure.Services;
 using EveUp.Services;
-using Hangfire;
-using Hangfire.PostgreSql;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -77,14 +75,14 @@ builder.Services.AddScoped<TokenCleanupJob>();
 builder.Services.AddScoped<UnbanExpiredUsersJob>();
 builder.Services.AddScoped<AutoConfirmAttendanceJob>();
 
-// Hangfire
-builder.Services.AddHangfire(config => config
-    .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
-    .UseSimpleAssemblyNameTypeSerializer()
-    .UseRecommendedSerializerSettings()
-    .UsePostgreSqlStorage(options =>
-        options.UseNpgsqlConnection(builder.Configuration.GetConnectionString("DefaultConnection"))));
-builder.Services.AddHangfireServer();
+// Hangfire desabilitado temporariamente para reduzir consumo de memória (512MB limit)
+// builder.Services.AddHangfire(config => config
+//     .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
+//     .UseSimpleAssemblyNameTypeSerializer()
+//     .UseRecommendedSerializerSettings()
+//     .UsePostgreSqlStorage(options =>
+//         options.UseNpgsqlConnection(builder.Configuration.GetConnectionString("DefaultConnection"))));
+// builder.Services.AddHangfireServer();
 
 // Controllers
 builder.Services.AddControllers()
@@ -122,33 +120,30 @@ app.UseCors("EveUpPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Hangfire Dashboard (Development only)
-if (app.Environment.IsDevelopment())
-{
-    app.UseHangfireDashboard("/hangfire");
-}
+// Hangfire Dashboard desabilitado temporariamente
+// if (app.Environment.IsDevelopment())
+// {
+//     app.UseHangfireDashboard("/hangfire");
+// }
 
 app.MapControllers();
 
-// Register recurring Hangfire jobs
-RecurringJob.AddOrUpdate<TimeoutCheckerJob>(
-    "timeout-checker",
-    job => job.ExecuteAsync(),
-    "*/15 * * * *"); // Every 15 minutes
-
-RecurringJob.AddOrUpdate<TokenCleanupJob>(
-    "token-cleanup",
-    job => job.ExecuteAsync(),
-    Cron.Daily); // Once per day at midnight
-
-RecurringJob.AddOrUpdate<UnbanExpiredUsersJob>(
-    "unban-expired-users",
-    job => job.ExecuteAsync(),
-    Cron.Hourly); // Every hour to check for expired bans
-
-RecurringJob.AddOrUpdate<AutoConfirmAttendanceJob>(
-    "auto-confirm-attendance",
-    job => job.ExecuteAsync(),
-    Cron.Hourly); // Every hour to auto-confirm attendances after 24h
+// Hangfire recurring jobs desabilitados temporariamente
+// RecurringJob.AddOrUpdate<TimeoutCheckerJob>(
+//     "timeout-checker",
+//     job => job.ExecuteAsync(),
+//     "*/15 * * * *");
+// RecurringJob.AddOrUpdate<TokenCleanupJob>(
+//     "token-cleanup",
+//     job => job.ExecuteAsync(),
+//     Cron.Daily);
+// RecurringJob.AddOrUpdate<UnbanExpiredUsersJob>(
+//     "unban-expired-users",
+//     job => job.ExecuteAsync(),
+//     Cron.Hourly);
+// RecurringJob.AddOrUpdate<AutoConfirmAttendanceJob>(
+//     "auto-confirm-attendance",
+//     job => job.ExecuteAsync(),
+//     Cron.Hourly);
 
 app.Run();

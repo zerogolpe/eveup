@@ -28,3 +28,4 @@ d:\EVEUP\EveUp.Services\obj\Debug\net9.0\EveUp.Services.dll
 d:\EVEUP\EveUp.Services\obj\Debug\net9.0\refint\EveUp.Services.dll
 d:\EVEUP\EveUp.Services\obj\Debug\net9.0\EveUp.Services.pdb
 D:\EVEUP\EveUp.Services\obj\Debug\net9.0\ref\EveUp.Services.dll
+D:\EveUp\EveUp.Services\obj\Debug\net9.0\EveUp.Services.sourcelink.json

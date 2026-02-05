@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sk1ZdeHuH38=",
+  "dgSpecHash": "OBrkP4N+YZk=",
   "success": true,
   "projectFilePath": "D:\\EVEUP\\EveUp.Services\\EveUp.Services.csproj",
   "expectedPackageFiles": [
@@ -12,21 +12,12 @@
     "C:\\Users\\AND\\.nuget\\packages\\microsoft.identitymodel.logging\\7.0.0\\microsoft.identitymodel.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\AND\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.0.0\\microsoft.identitymodel.tokens.7.0.0.nupkg.sha512",
     "C:\\Users\\AND\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "C:\\Users\\AND\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.0.0\\system.identitymodel.tokens.jwt.7.0.0.nupkg.sha512"
+    "C:\\Users\\AND\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.0.0\\system.identitymodel.tokens.jwt.7.0.0.nupkg.sha512",
+    "C:\\Users\\AND\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.12\\microsoft.netcore.app.ref.9.0.12.nupkg.sha512",
+    "C:\\Users\\AND\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.12\\microsoft.windowsdesktop.app.ref.9.0.12.nupkg.sha512",
+    "C:\\Users\\AND\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.12\\microsoft.aspnetcore.app.ref.9.0.12.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "message": "Package 'Microsoft.IdentityModel.JsonWebTokens' 7.0.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "projectPath": "D:\\EVEUP\\EveUp.Services\\EveUp.Services.csproj",
-      "warningLevel": 1,
-      "filePath": "D:\\EVEUP\\EveUp.Services\\EveUp.Services.csproj",
-      "libraryId": "Microsoft.IdentityModel.JsonWebTokens",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
     {
       "code": "NU1902",
       "level": "Warning",
@@ -36,7 +27,7 @@
       "filePath": "D:\\EVEUP\\EveUp.Services\\EveUp.Services.csproj",
       "libraryId": "System.IdentityModel.Tokens.Jwt",
       "targetGraphs": [
-        "net10.0"
+        "net9.0"
       ]
     }
   ]

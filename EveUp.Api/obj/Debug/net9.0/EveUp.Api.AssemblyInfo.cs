@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EveUp.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c9fd442acd7077017d99230238e9a0509ee1ccb")]
 [assembly: System.Reflection.AssemblyProductAttribute("EveUp.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EveUp.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

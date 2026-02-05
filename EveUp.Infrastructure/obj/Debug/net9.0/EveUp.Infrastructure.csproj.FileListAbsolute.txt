@@ -32,3 +32,4 @@ d:\EVEUP\EveUp.Infrastructure\obj\Debug\net9.0\refint\EveUp.Infrastructure.dll
 d:\EVEUP\EveUp.Infrastructure\obj\Debug\net9.0\EveUp.Infrastructure.pdb
 D:\EVEUP\EveUp.Infrastructure\obj\Debug\net9.0\EveUp.Infrastructure.genruntimeconfig.cache
 D:\EVEUP\EveUp.Infrastructure\obj\Debug\net9.0\ref\EveUp.Infrastructure.dll
+D:\EveUp\EveUp.Infrastructure\obj\Debug\net9.0\EveUp.Infrastructure.sourcelink.json

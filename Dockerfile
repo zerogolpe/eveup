@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:10.0-preview AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
 # Copiar arquivos do projeto
@@ -18,11 +18,14 @@ COPY . .
 RUN dotnet publish EveUp.Api/EveUp.Api.csproj -c Release -o /app
 
 # Imagem final
-FROM mcr.microsoft.com/dotnet/aspnet:10.0-preview
+FROM mcr.microsoft.com/dotnet/aspnet:9.0
 WORKDIR /app
 COPY --from=build /app .
 
 ENV ASPNETCORE_URLS=http://+:8080
+ENV DOTNET_gcServer=0
+ENV DOTNET_GCHeapHardLimit=0x1C000000
+
 EXPOSE 8080
 
 ENTRYPOINT ["dotnet", "EveUp.Api.dll"]

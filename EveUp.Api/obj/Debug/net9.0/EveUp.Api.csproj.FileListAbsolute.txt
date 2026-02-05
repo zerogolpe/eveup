@@ -174,11 +174,6 @@ d:\EVEUP\EveUp.Api\bin\Debug\net9.0\EveUp.Api.runtimeconfig.json
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\EveUp.Api.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\EveUp.Api.pdb
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\BCrypt.Net-Next.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Dapper.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Hangfire.AspNetCore.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Hangfire.Core.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Hangfire.NetCore.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Hangfire.PostgreSql.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Humanizer.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
@@ -212,7 +207,6 @@ d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConn
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Microsoft.OpenApi.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Mono.TextTemplating.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Newtonsoft.Json.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Npgsql.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -225,20 +219,6 @@ d:\EVEUP\EveUp.Api\bin\Debug\net9.0\System.Composition.Hosting.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\System.Composition.Runtime.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\System.Composition.TypedParts.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\ca\Hangfire.Core.resources.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\de\Hangfire.Core.resources.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\es\Hangfire.Core.resources.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\fa\Hangfire.Core.resources.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\fr\Hangfire.Core.resources.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\nb\Hangfire.Core.resources.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\nl\Hangfire.Core.resources.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\pt-BR\Hangfire.Core.resources.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\pt-PT\Hangfire.Core.resources.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\pt\Hangfire.Core.resources.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\sv\Hangfire.Core.resources.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\tr-TR\Hangfire.Core.resources.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\zh-TW\Hangfire.Core.resources.dll
-d:\EVEUP\EveUp.Api\bin\Debug\net9.0\zh\Hangfire.Core.resources.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
 d:\EVEUP\EveUp.Api\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -333,3 +313,5 @@ d:\EVEUP\EveUp.Api\obj\Debug\net9.0\refint\EveUp.Api.dll
 d:\EVEUP\EveUp.Api\obj\Debug\net9.0\EveUp.Api.pdb
 d:\EVEUP\EveUp.Api\obj\Debug\net9.0\EveUp.Api.genruntimeconfig.cache
 d:\EVEUP\EveUp.Api\obj\Debug\net9.0\ref\EveUp.Api.dll
+D:\EveUp\EveUp.Api\bin\Debug\net9.0\EveUp.Api.staticwebassets.runtime.json
+D:\EveUp\EveUp.Api\obj\Debug\net9.0\EveUp.Api.sourcelink.json

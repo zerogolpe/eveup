@@ -20,3 +20,4 @@ d:\EVEUP\EveUp.Core\obj\Debug\net9.0\EveUp.Core.dll
 d:\EVEUP\EveUp.Core\obj\Debug\net9.0\refint\EveUp.Core.dll
 d:\EVEUP\EveUp.Core\obj\Debug\net9.0\EveUp.Core.pdb
 d:\EVEUP\EveUp.Core\obj\Debug\net9.0\ref\EveUp.Core.dll
+D:\EveUp\EveUp.Core\obj\Debug\net9.0\EveUp.Core.sourcelink.json
