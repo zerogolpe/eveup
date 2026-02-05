@@ -58,7 +58,6 @@ public class SmtpEmailService : INotificationService
         catch (Exception ex)
         {
             _logger.LogError(ex, "[Email] Failed to send to {Email}: {Subject}", email, subject);
-            throw;
         }
     }
 }

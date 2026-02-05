@@ -82,7 +82,12 @@ public class AuthService : IAuthService
         await _userRepo.AddAsync(user);
 
         // Gerar e enviar código de verificação de email
-        await GenerateAndSendVerificationCodeAsync(user);
+        // Se falhar, registro continua - usuário pode usar /resend-verification
+        try
+        {
+            await GenerateAndSendVerificationCodeAsync(user);
+        }
+        catch { /* Email failure must not block registration */ }
 
         var accessToken = _tokenService.GenerateAccessToken(user);
         var (refreshToken, _) = await _tokenService.GenerateRefreshTokenAsync(user);
