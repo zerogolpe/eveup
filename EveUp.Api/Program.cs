@@ -109,13 +109,11 @@ app.UseMiddleware<ExceptionMiddleware>();
 app.UseMiddleware<AuditMiddleware>();
 app.UseMiddleware<RateLimitMiddleware>();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
+// HttpsRedirection desabilitado - Render já faz TLS termination no proxy
+// app.UseHttpsRedirection();
 app.UseCors("EveUpPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
@@ -125,6 +123,9 @@ app.UseAuthorization();
 // {
 //     app.UseHangfireDashboard("/hangfire");
 // }
+
+app.MapGet("/", () => "EveUp API Running");
+app.MapGet("/api/health", () => "OK");
 
 app.MapControllers();
 
